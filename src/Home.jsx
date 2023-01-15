@@ -1,14 +1,44 @@
+import React, { useEffect, useState } from "react";
 import homeIcon from "./assets/home.png";
 import heartIcon from "./assets/heart.png";
 import compassIcon from "./assets/compass.png";
 import addIcon from "./assets/add.png";
 import filterIcon from "./assets/filter.png";
-import exampleImage from "./assets/bandc.jpeg";
-import example2Image from "./assets/livingcafe.jpeg";
-import wifiIcon from "./assets/wifi.png";
-import powerIcon from "./assets/power.png";
+import Thumbnail from "./Thumbnail.jsx"
+import data from './data.js'
+import Info from "./Info";
 
 export default function Home() {
+  const [showCard, setShowCard] = useState(false)
+  const [currentCafe, setCurrentCafe] = useState('');
+
+
+function toggleShowCard() {
+  
+  setShowCard(prevState => !prevState)
+  
+}
+
+  const cards = data.map(item => {
+    return (
+        <Thumbnail
+            key={item.id}
+            // img={item.imageUrl}
+            address={item.address}
+            openingHours={`${item.opening_time} - ${item.closing_time}`}
+        name={item.cafe_name}
+            price={item.coffee_price}
+            contact={item.phone}
+            setCurrentCafe={setCurrentCafe}
+            
+            
+            
+        />
+    )
+})        
+
+
+  
   return (
     <div className="home container">
       <section className="current-location">
@@ -24,39 +54,43 @@ export default function Home() {
       </section>
       <nav className="nav-top">
         <a href="">
-          <p>Favourites</p>
+          <p className='underline'>Favourites</p>
         </a>
         <a href="">
-          <p>Browse All</p>
+          <p className='underline'>All</p>
         </a>
         <a href="">
-          <p>New</p>
+          <p className='underline'>New</p>
         </a>
         <a href="">
-          <p>Recently Visited</p>
+          <p className='underline'>Recently Visited</p>
         </a>
       </nav>
 
-      <section className="cafe-card-section">
-        <div className="cafe-card">
-          <img src={exampleImage} alt="Baker and Cook" />
-          <h1 className="cafe-name">Baker and Cook (Hillcrest) </h1>
-          <div className="facilities">
-            <img src={wifiIcon} alt="Wifi" />
-            <img src={powerIcon} alt="Power Socket" />
-          </div>
-        </div>
-
-        <div className="cafe-card">
-          <img src={example2Image} alt="The Living Cafe" />
-          <h1 className="cafe-name">The Living Cafe</h1>
-
-          <div className="facilities">
-            <img src={wifiIcon} alt="Wifi" />
-            <img src={powerIcon} alt="Power Socket" />
-          </div>
-        </div>
+      <section className="cafe-thumbnail-section" onClick={toggleShowCard}>
+        {cards}
       </section>
+
+       {currentCafe && 
+       
+       
+       
+       <Info
+      
+      
+      key={currentCafe.id}
+      // img={chosenCafe.imageUrl}
+      address={currentCafe.address}
+      openingHours={`${currentCafe.opening_time} - ${currentCafe.closing_time}`}
+      name={currentCafe.cafe_name}
+      price={currentCafe.coffee_price}
+      contact={currentCafe.phone}
+      showCard={showCard}
+      toggleShowCard={toggleShowCard}
+      />
+      
+      
+      }
 
       <nav className="nav-bottom">
         <a href="">

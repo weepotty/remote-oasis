@@ -12,7 +12,9 @@
   -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 } */
-
+p{
+  margin:0;
+}
 .title {
   line-height: 36px;
   margin: 0;
@@ -40,8 +42,10 @@
 .card {
   background: white;
   border-radius: 1.5rem;
-  height: 50vh;
   padding: 1.5rem;
+  
+
+  
 }
 
 .start.card {
@@ -49,6 +53,45 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  height: 50vh;
+  text-align: center;
+}
+
+.info.card {
+width: 100%;
+
+left:0;
+bottom: 0;
+ position: absolute; 
+ height: 95%;
+border: 1px solid black;
+animation-fill-mode: forwards;
+/* animation: slide-in 0.3s ; */
+}
+
+@keyframes slide-in {
+  0%    { transform: translateY(900px); }
+ 
+  100%  {  transform: translateY(0px); }
+}
+
+@keyframes slide-out {
+  0% { transform: translateY(0px); }
+  100%  {  transform: translateY(900px);}
+}
+
+
+
+.info.card > .cafe-thumbnail{
+  width: 100%;
+}
+
+.info.card > .cafe-thumbnail >img{
+  border-radius: 1.5rem;;
+}
+
+.back-arrow {
+  cursor: pointer;
 }
 
 .btn {
@@ -78,10 +121,14 @@
   flex-direction: column;
   background-color: #f9f9fb;
   position: relative;
+  
+
+  
+  
 }
 
 /* .container.home > * {
-  border: 1px solid red;
+  border: 1px solid lightgrey;
 } */
 
 .current-location {
@@ -146,10 +193,13 @@
   flex-shrink: 0;
 }
 
+
+
 .search-container {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
+  
 }
 
 #search-bar {
@@ -181,7 +231,7 @@
   transform: matrix(-1, 0, 0, 1, 0, 0);
   cursor: pointer;
 }
-.cafe-card-section {
+.cafe-thumbnail-section {
   display: flex;
   gap: 1.2rem;
   width: 100%;
@@ -189,23 +239,29 @@
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: x mandatory;
+  cursor: pointer;
 }
 
-.cafe-card-section::-webkit-scrollbar {
+.cafe-thumbnail-section::-webkit-scrollbar {
   display: none;
 }
 
-.cafe-card {
-  display: flex;
+
+
+.cafe-thumbnail {
+  display: flex; 
   flex-direction: column;
   width: 90%;
+  /* border:1px solid pink; */
+  
 }
 
-.cafe-card img {
+.cafe-thumbnail > img {
   border-radius: 0.75rem;
-  height: 75%;
+  max-width: content;
   object-fit: cover;
+  
 }
 
 .cafe-name {
@@ -213,11 +269,23 @@
   font-size: 1.125rem;
   line-height: 1.5rem;
   color: #464646;
+  margin: 5px 0;
 }
 
-.facilities {
-  opacity: 60%;
+.address {
+color: #A1A7B0;
+font-weight: 500;
+margin-bottom: 0.5em;
+
 }
+
+/* .facilities {
+  opacity: 60%;
+} */
+.underline:after {
+  background-color:#4c9fc1 !important
+  }
+
 
 @media only screen and (max-width: 600px) {
   body {
@@ -227,5 +295,6 @@
 
   .container {
     height: 85vh;
+    border:1px solid red;
   }
 }

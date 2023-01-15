@@ -1,4 +1,6 @@
-import { useState } from "react";
+import React from 'react'
+
+
 
 export default function Start(props) {
   return (
@@ -9,9 +11,17 @@ export default function Start(props) {
           Somewhere you can experience the perfect blend of productivity and
           enjoyment. Good coffee, good tunes, good vibes.
         </p>
+
         <button className="btn" onClick={props.toggleStart}>
           Get Started
         </button>
+
+       
+
+
+        
+
+  
       </div>
     </div>
   );

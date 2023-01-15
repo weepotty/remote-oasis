@@ -7,7 +7,7 @@
 #root {
   max-width: 1280px;
   margin: 0;
-  text-align: center;
+  
   display: grid;
   place-items: center;
   font-family: "Manrope", sans-serif;
