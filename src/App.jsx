@@ -1,19 +1,24 @@
-import { useState } from "react";
+
 import "./App.css";
 import Start from "./Start.jsx";
 import Home from "./Home.jsx";
-
-
+import {Routes, Route} from 'react-router-dom'
+import Info from "./Info";
 export default function App() {
-  const [getStarted, setGetStarted] = useState(false);
-
-  function toggleStart() {
-    setGetStarted((prevState) => !prevState);
-    
-  }
+ 
   return (
-    <div>{!getStarted ? <Start toggleStart={toggleStart} /> : <Home />}
-    
+    <div>
+      
+
+
+<Routes>
+<Route path="/" element={<Start />} />  
+<Route path="list" element={<Home />} />
+<Route path="list/:cafeId" element={<Info />} />
+
+</Routes>
+
+
     </div>
 
     

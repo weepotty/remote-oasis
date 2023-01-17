@@ -1,3 +1,6 @@
+
+
+
 export default [
   {
     "id": 1,
@@ -9,7 +12,7 @@ export default [
     "power": false,
     "coffee_price": 2368.51,
     "phone": 432,
-    "image": "http://dummyimage.com/300x300.png/ff4444/ffffff"
+    "image": '/bandc.jpeg'
   },
   {
     "id": 2,
@@ -21,7 +24,7 @@ export default [
     "power": true,
     "coffee_price": 5282.49,
     "phone": 4766,
-    "image": "http://dummyimage.com/300x300.png/dddddd/000000"
+    "image": "/2.jpeg"
   },
   {
     "id": 3,
@@ -33,7 +36,7 @@ export default [
     "power": true,
     "coffee_price": 6963.69,
     "phone": 1115,
-    "image": "http://dummyimage.com/300x300.png/dddddd/000000"
+    "image": "/3.jpeg"
   },
   {
     "id": 4,
@@ -45,7 +48,7 @@ export default [
     "power": true,
     "coffee_price": 308.11,
     "phone": 1655,
-    "image": "http://dummyimage.com/300x300.png/ff4444/ffffff"
+    "image": "/4.jpeg"
   },
   {
     "id": 5,
@@ -57,7 +60,7 @@ export default [
     "power": false,
     "coffee_price": 4293.3,
     "phone": 6236,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image":"/5.jpeg"
   },
   {
     "id": 6,
@@ -69,7 +72,7 @@ export default [
     "power": false,
     "coffee_price": 541.74,
     "phone": 6241,
-    "image": "http://dummyimage.com/300x300.png/ff4444/ffffff"
+    "image": "/6.jpeg"
   },
   {
     "id": 7,
@@ -81,7 +84,7 @@ export default [
     "power": true,
     "coffee_price": 2579.21,
     "phone": 6788,
-    "image": "http://dummyimage.com/300x300.png/cc0000/ffffff"
+    "image": "/7.jpeg"
   },
   {
     "id": 8,
@@ -93,7 +96,7 @@ export default [
     "power": false,
     "coffee_price": 6925.66,
     "phone": 4083,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image": "/8.jpeg"
   },
   {
     "id": 9,
@@ -105,7 +108,7 @@ export default [
     "power": false,
     "coffee_price": 3764.73,
     "phone": 6333,
-    "image": "http://dummyimage.com/300x300.png/dddddd/000000"
+    "image": "/9.jpeg"
   },
   {
     "id": 10,
@@ -117,7 +120,7 @@ export default [
     "power": false,
     "coffee_price": 1213.51,
     "phone": 5172,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image": "/10.jpeg"
   },
   {
     "id": 11,
@@ -129,7 +132,7 @@ export default [
     "power": true,
     "coffee_price": 6635.79,
     "phone": 551,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image": "/11.jpeg"
   },
   {
     "id": 12,
@@ -141,7 +144,7 @@ export default [
     "power": false,
     "coffee_price": 4440.61,
     "phone": 4654,
-    "image": "http://dummyimage.com/300x300.png/cc0000/ffffff"
+    "image": "/12.jpeg"
   },
   {
     "id": 13,
@@ -153,7 +156,7 @@ export default [
     "power": false,
     "coffee_price": 2174.65,
     "phone": 3209,
-    "image": "http://dummyimage.com/300x300.png/dddddd/000000"
+    "image": "/13.jpeg"
   },
   {
     "id": 14,
@@ -165,7 +168,7 @@ export default [
     "power": true,
     "coffee_price": 2870.99,
     "phone": 1659,
-    "image": "http://dummyimage.com/300x300.png/ff4444/ffffff"
+    "image": "/14.jpeg"
   },
   {
     "id": 15,
@@ -177,7 +180,7 @@ export default [
     "power": false,
     "coffee_price": 6166.15,
     "phone": 608,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image": "/15.jpeg"
   },
   {
     "id": 16,
@@ -189,7 +192,7 @@ export default [
     "power": true,
     "coffee_price": 4865.48,
     "phone": 4723,
-    "image": "http://dummyimage.com/300x300.png/dddddd/000000"
+    "image":"/16.jpeg"
   },
   {
     "id": 17,
@@ -201,7 +204,7 @@ export default [
     "power": false,
     "coffee_price": 5863.81,
     "phone": 588,
-    "image": "http://dummyimage.com/300x300.png/cc0000/ffffff"
+    "image": "/17.jpeg"
   },
   {
     "id": 18,
@@ -213,7 +216,7 @@ export default [
     "power": true,
     "coffee_price": 6244.33,
     "phone": 3282,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image": "/18.jpeg"
   },
   {
     "id": 19,
@@ -225,7 +228,7 @@ export default [
     "power": false,
     "coffee_price": 1116.28,
     "phone": 2818,
-    "image": "http://dummyimage.com/300x300.png/5fa2dd/ffffff"
+    "image": "/19.jpeg"
   },
   {
     "id": 20,
@@ -237,6 +240,6 @@ export default [
     "power": true,
     "coffee_price": 5611.58,
     "phone": 2667,
-    "image": "http://dummyimage.com/300x300.png/dddddd/000000"
+    "image": "/20.jpeg"
   }
 ]

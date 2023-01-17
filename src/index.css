@@ -12,8 +12,9 @@
   -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 } */
-p{
-  margin:0;
+
+p {
+  margin: 0;
 }
 .title {
   line-height: 36px;
@@ -28,7 +29,7 @@ p{
   border-radius: 1.5rem;
   max-width: 600px;
   padding: 1.5rem;
-  height: 100vh;
+  max-height: 100vh;
   width: 100vw;
 }
 
@@ -37,15 +38,13 @@ p{
   background: url("./assets/remote-working.jpeg");
   background-size: cover;
   background-position: 50%;
+  height: 100vh;
 }
 
 .card {
   background: white;
   border-radius: 1.5rem;
   padding: 1.5rem;
-  
-
-  
 }
 
 .start.card {
@@ -57,41 +56,53 @@ p{
   text-align: center;
 }
 
-.info.card {
-width: 100%;
+.info.container {
+  padding:0;
+  margin:auto;
+}
 
-left:0;
-bottom: 0;
- position: absolute; 
- height: 95%;
+.info.card {
+  height:100%;
+  
 border: 1px solid black;
-animation-fill-mode: forwards;
-/* animation: slide-in 0.3s ; */
+  box-sizing:content-box;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 @keyframes slide-in {
-  0%    { transform: translateY(900px); }
+  0% {
+    transform: translateY(900px);
+  }
  
-  100%  {  transform: translateY(0px); }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 @keyframes slide-out {
-  0% { transform: translateY(0px); }
-  100%  {  transform: translateY(900px);}
+  0% {
+    transform: translateY(0px);
+  }
+ 
+  100% {
+    transform: translateY(900px);
+  }
 }
 
-
-
-.info.card > .cafe-thumbnail{
-  width: 100%;
+.info.card > img {
+  border-radius: 1.5rem;
 }
 
-.info.card > .cafe-thumbnail >img{
-  border-radius: 1.5rem;;
+.info.card .cafe-name {
+  font-size: 1.5rem;
 }
 
 .back-arrow {
   cursor: pointer;
+  width: 25px;
 }
 
 .btn {
@@ -120,10 +131,7 @@ animation-fill-mode: forwards;
   padding-bottom: 0;
   flex-direction: column;
   background-color: #f9f9fb;
-  position: relative;
-  
-
-  
+  height: 100vh;
   
 }
 
@@ -171,12 +179,15 @@ animation-fill-mode: forwards;
   display: flex;
   align-items: center;
   gap: 2rem;
-  overflow-y: hidden;
   overflow-x: scroll;
+  overflow-y: hidden;
   width: 100%;
+  padding: 0.5em 0;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+
 
 .nav-top::-webkit-scrollbar {
   display: none;
@@ -191,15 +202,13 @@ animation-fill-mode: forwards;
 
 .nav-top > * {
   flex-shrink: 0;
+  
 }
-
-
 
 .search-container {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  
 }
 
 #search-bar {
@@ -207,7 +216,7 @@ animation-fill-mode: forwards;
   border-radius: 0.75rem;
   padding: 0.9rem;
   padding-left: 3rem;
-  background: url("./src/assets/search.png") left center no-repeat white;
+  background: url("/search.png") left center no-repeat white;
   background-position: 0.9rem;
   width: 100%;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
@@ -217,6 +226,10 @@ animation-fill-mode: forwards;
   font-size: 1rem;
 
   color: #ced0d4;
+}
+
+#search-bar:focus {
+  outline: 1px solid rgb(202, 202, 202);
 }
 
 .filter-btn {
@@ -234,35 +247,37 @@ animation-fill-mode: forwards;
 .cafe-thumbnail-section {
   display: flex;
   gap: 1.2rem;
-  width: 100%;
   text-align: left;
   overflow-x: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
   cursor: pointer;
+  /* border: 1px solid red; */
+  
 }
+
+
+
+.cafes {
+  /* border: 1px solid purple; */
+  display:flex;
+  flex-direction: column;
+  min-width: 80%;
+  
+}
+
+.cafes > img {
+  border-radius: 0.75em;
+  height: 80%;
+object-fit: cover;}
+
 
 .cafe-thumbnail-section::-webkit-scrollbar {
   display: none;
 }
 
 
-
-.cafe-thumbnail {
-  display: flex; 
-  flex-direction: column;
-  width: 90%;
-  /* border:1px solid pink; */
-  
-}
-
-.cafe-thumbnail > img {
-  border-radius: 0.75rem;
-  max-width: content;
-  object-fit: cover;
-  
-}
 
 .cafe-name {
   font-weight: 700;
@@ -273,28 +288,22 @@ animation-fill-mode: forwards;
 }
 
 .address {
-color: #A1A7B0;
-font-weight: 500;
-margin-bottom: 0.5em;
-
+  color: #a1a7b0;
+  font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
 /* .facilities {
   opacity: 60%;
 } */
 .underline:after {
-  background-color:#4c9fc1 !important
-  }
-
+  background-color: #4c9fc1 !important;
+}
 
 @media only screen and (max-width: 600px) {
-  body {
-    display: grid;
-    place-items: center;
-  }
+ 
 
   .container {
-    height: 85vh;
-    border:1px solid red;
+    border: 1px solid red;
   }
 }

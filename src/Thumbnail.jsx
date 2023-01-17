@@ -1,42 +1,36 @@
-import exampleImage from "./assets/bandc.jpeg";
-import example2Image from "./assets/livingcafe.jpeg";
 import wifiIcon from "./assets/wifi.png";
 import powerIcon from "./assets/power.png";
 import React, { useState, useEffect } from "react";
-import data from "./data.js";
 
+import { Link } from "react-router-dom";
 
 
 export default function Thumbnail(props) {
-  const [imageUrl, setImageUrl] = useState(null);
+  // const [imageUrl, setImageUrl] = useState(null);
 
-  useEffect(() => {
-    fetch("https://picsum.photos/300")
-      .then((res) => setImageUrl(res.url))
-      .then(console.log("run"));
-  }, []);
+  // useEffect(() => {
+  //   fetch("https://picsum.photos/300")
+  //     .then((res) => setImageUrl(res.url))
+  //     .then(console.log('fetch request'))
+  // }, []);
 
-
-  function handleClick (event) {
-  
-    const nameOfChosenCafe = event.target;
-    const chosenCafe = data.find((item) => item.cafe_name === nameOfChosenCafe.getAttribute('alt') || nameOfChosenCafe.innerText === item.cafe_name);
-    
-    props.setCurrentCafe(chosenCafe)
-    
+  const styles={
+    textDecoration: 'none'
   }
 
-  
+  console.log(props.img)
+
   return (
-    
-    <div className="cafe-thumbnail" onClick={handleClick}>
-      {imageUrl && <img src={`${imageUrl}`} alt={props.name} />}
+    <Link to={`${props.id}`} style={styles} className='cafes'>
+    {/* <div className="cafe-thumbnail-section"> */}
+     <img src={`${props.img}`} alt={props.name} />
       <h1 className="cafe-name">{props.name}</h1>
       <p className="address">{props.address}</p>
       <div className="facilities">
         <img src={wifiIcon} alt="Wifi" />
         <img src={powerIcon} alt="Power Socket" />
       </div>
-    </div>
+    {/* </div> */}
+    </Link>
   );
 }

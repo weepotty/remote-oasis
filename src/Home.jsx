@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+
 import homeIcon from "./assets/home.png";
 import heartIcon from "./assets/heart.png";
 import compassIcon from "./assets/compass.png";
@@ -6,30 +6,23 @@ import addIcon from "./assets/add.png";
 import filterIcon from "./assets/filter.png";
 import Thumbnail from "./Thumbnail.jsx"
 import data from './data.js'
-import Info from "./Info";
+
 
 export default function Home() {
-  const [showCard, setShowCard] = useState(false)
-  const [currentCafe, setCurrentCafe] = useState('');
-
-
-function toggleShowCard() {
   
-  setShowCard(prevState => !prevState)
-  
-}
 
   const cards = data.map(item => {
     return (
         <Thumbnail
             key={item.id}
-            // img={item.imageUrl}
+            id={item.id}
+            img={item.image}
             address={item.address}
             openingHours={`${item.opening_time} - ${item.closing_time}`}
         name={item.cafe_name}
             price={item.coffee_price}
             contact={item.phone}
-            setCurrentCafe={setCurrentCafe}
+            
             
             
             
@@ -67,30 +60,10 @@ function toggleShowCard() {
         </a>
       </nav>
 
-      <section className="cafe-thumbnail-section" onClick={toggleShowCard}>
+      <section className='cafe-thumbnail-section'>
         {cards}
       </section>
 
-       {currentCafe && 
-       
-       
-       
-       <Info
-      
-      
-      key={currentCafe.id}
-      // img={chosenCafe.imageUrl}
-      address={currentCafe.address}
-      openingHours={`${currentCafe.opening_time} - ${currentCafe.closing_time}`}
-      name={currentCafe.cafe_name}
-      price={currentCafe.coffee_price}
-      contact={currentCafe.phone}
-      showCard={showCard}
-      toggleShowCard={toggleShowCard}
-      />
-      
-      
-      }
 
       <nav className="nav-bottom">
         <a href="">
