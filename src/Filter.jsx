@@ -2,7 +2,7 @@ import { useState } from 'react';
 import filterIcon from "./assets/filter.png";
 
 export default function Filter() {
-  const [filterOptions, setFilterOptions] = useState({ option1: false, option2: false });
+  const [filterOptions, setFilterOptions] = useState({ openNow: true, wifi: false, power: false});
 const [isOpen, setIsOpen] = useState(false)
 
   const handleOptionChange = (event) => {
@@ -10,34 +10,47 @@ const [isOpen, setIsOpen] = useState(false)
     setFilterOptions({ ...filterOptions, [name]: checked });
   }
 
+
   return (
     <div>
       <button className="filter-btn" onClick={() => setIsOpen(prevState=>!prevState)}>
           <img src={filterIcon} className="filter icon" alt="Filter" />
         </button>
 
-      {isOpen && (
-        <form>
-          <label>
+
+        <form className={`filters ${isOpen ? 'visible' : ''}`}>
+          <label for='openNow'>
             <input
               type="checkbox"
-              name="option1"
-              checked={filterOptions.option1}
+              name="openNow"
+              id="openNow"
+              checked={filterOptions.openNow}
               onChange={handleOptionChange}
             />
-            Option 1
+            Open now
           </label>
-          <label>
+          <label for='wifi'>
             <input
               type="checkbox"
-              name="option2"
-              checked={filterOptions.option2}
+              name="wifi"
+              id="wifi"
+              checked={filterOptions.wifi}
               onChange={handleOptionChange}
             />
-            Option 2
+            Wifi
+          </label>
+          <label for='power'>
+            <input
+              type="checkbox"
+              name="power"
+              id="power"
+              checked={filterOptions.power}
+              onChange={handleOptionChange}
+            />
+            Power
           </label>
         </form>
-      )}
+
     </div>
   );
 }
