@@ -18,7 +18,7 @@ export default function Thumbnail(props) {
     textDecoration: 'none'
   }
 
-  console.log(props.img)
+
 
   return (
     <Link to={`${props.id}`} style={styles} className='cafes'>

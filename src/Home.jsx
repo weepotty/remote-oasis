@@ -1,15 +1,11 @@
 
-import homeIcon from "./assets/home.png";
-import heartIcon from "./assets/heart.png";
-import compassIcon from "./assets/compass.png";
-import addIcon from "./assets/add.png";
-import filterIcon from "./assets/filter.png";
 import Thumbnail from "./Thumbnail.jsx"
 import data from './data.js'
-
+import Nav from "./Nav.jsx"
+import Filter from "./Filter.jsx";
 
 export default function Home() {
-  
+
 
   const cards = data.map(item => {
     return (
@@ -22,16 +18,13 @@ export default function Home() {
         name={item.cafe_name}
             price={item.coffee_price}
             contact={item.phone}
-            
-            
-            
-            
+
         />
     )
-})        
+})
 
 
-  
+
   return (
     <div className="home container">
       <section className="current-location">
@@ -41,10 +34,10 @@ export default function Home() {
 
       <section className="search-container">
         <input id="search-bar" type="text" placeholder="Enter location" />
-        <button className="filter-btn">
-          <img src={filterIcon} className="filter icon" alt="Filter" />
-        </button>
+        <Filter />
       </section>
+
+
       <nav className="nav-top">
         <a href="">
           <p className='underline'>Favourites</p>
@@ -53,10 +46,10 @@ export default function Home() {
           <p className='underline'>All</p>
         </a>
         <a href="">
-          <p className='underline'>New</p>
+          <p className='underline inactive'>New</p>
         </a>
         <a href="">
-          <p className='underline'>Recently Visited</p>
+          <p className='underline inactive'>Recently Visited</p>
         </a>
       </nav>
 
@@ -65,20 +58,8 @@ export default function Home() {
       </section>
 
 
-      <nav className="nav-bottom">
-        <a href="">
-          <img src={homeIcon} className="nav-icon" alt="Home" />
-        </a>
-        <a href="">
-          <img src={heartIcon} className="nav-icon" alt="Favourites" />
-        </a>
-        <a href="">
-          <img src={compassIcon} className="nav-icon" alt="Near Me" />
-        </a>
-        <a href="">
-          <img src={addIcon} className="nav-icon" alt="Add New" />
-        </a>
-      </nav>
+      <Nav />
+
     </div>
   );
 }

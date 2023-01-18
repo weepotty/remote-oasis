@@ -29,8 +29,8 @@ p {
   border-radius: 1.5rem;
   max-width: 600px;
   padding: 1.5rem;
-  max-height: 100vh;
   width: 100vw;
+  height: 100vh;
 }
 
 .start.container {
@@ -38,7 +38,7 @@ p {
   background: url("./assets/remote-working.jpeg");
   background-size: cover;
   background-position: 50%;
-  height: 100vh;
+
 }
 
 .card {
@@ -56,26 +56,29 @@ p {
   text-align: center;
 }
 
-.info.container {
-  padding:0;
-  margin:auto;
+
+
+
+
+.info.container{
+
+  padding: 0;
+
 }
 
 .info.card {
-  height:100%;
-  
-border: 1px solid black;
-  box-sizing:content-box;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  height: 95%;
 }
 
 @keyframes slide-in {
   0% {
     transform: translateY(900px);
   }
- 
+
 
   100% {
     transform: translateY(0px);
@@ -86,7 +89,7 @@ border: 1px solid black;
   0% {
     transform: translateY(0px);
   }
- 
+
   100% {
     transform: translateY(900px);
   }
@@ -131,13 +134,10 @@ border: 1px solid black;
   padding-bottom: 0;
   flex-direction: column;
   background-color: #f9f9fb;
-  height: 100vh;
-  
+
+
 }
 
-/* .container.home > * {
-  border: 1px solid lightgrey;
-} */
 
 .current-location {
   text-align: left;
@@ -173,6 +173,8 @@ border: 1px solid black;
   justify-content: space-evenly;
   border-radius: 20px;
   margin-top: auto;
+
+
 }
 
 .nav-top {
@@ -187,6 +189,10 @@ border: 1px solid black;
   scrollbar-width: none;
 }
 
+.inactive {
+  color: rgb(140, 140, 140);
+  cursor: not-allowed;
+}
 
 
 .nav-top::-webkit-scrollbar {
@@ -202,7 +208,7 @@ border: 1px solid black;
 
 .nav-top > * {
   flex-shrink: 0;
-  
+
 }
 
 .search-container {
@@ -254,7 +260,7 @@ border: 1px solid black;
   scroll-snap-type: x mandatory;
   cursor: pointer;
   /* border: 1px solid red; */
-  
+
 }
 
 
@@ -264,7 +270,7 @@ border: 1px solid black;
   display:flex;
   flex-direction: column;
   min-width: 80%;
-  
+
 }
 
 .cafes > img {
@@ -298,12 +304,4 @@ object-fit: cover;}
 } */
 .underline:after {
   background-color: #4c9fc1 !important;
-}
-
-@media only screen and (max-width: 600px) {
- 
-
-  .container {
-    border: 1px solid red;
-  }
 }

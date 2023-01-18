@@ -6,7 +6,7 @@ import backArrow from "./assets/back-arrow.png";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Info() {
-  console.log('info component rendered')
+
   const { cafeId } = useParams();
 
 
@@ -16,12 +16,12 @@ export default function Info() {
   const [isSlidingOut, setIsSlidingOut] = useState(false);
 
   function handleGoBack() {
-    
+
     setIsSlidingOut(true)
       setTimeout(() => {
       navigate("/list");
   }, 300);
-    
+
   }
 
   const styles = {
@@ -41,15 +41,7 @@ export default function Info() {
           onClick={handleGoBack}
         />
 
-        {/* <Thumbnail
-          key={thisCafe.id}
-          img={thisCafe.image}
-          address={thisCafe.address}
-          openingHours={`${thisCafe.opening_time} - ${thisCafe.closing_time}`}
-          name={thisCafe.cafe_name}
-          price={thisCafe.coffee_price}
-          contact={thisCafe.phone}
-        /> */}
+
 
 
 <img src={thisCafe.image} alt={thisCafe.name} />
@@ -60,7 +52,7 @@ export default function Info() {
 <p>icons go here</p>
 
 <p>Tucked away in a lush green suburb etc. description of the cafe goes here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos assumenda, delectus, magni ad consequuntur illum beatae obcaecati odio veniam ipsum omnis porro quasi architecto!</p>
-        
+
         <p>opening hours: {thisCafe.opening_time} - {thisCafe.closing_time}</p>
       </div>
     </div>
