@@ -6,16 +6,17 @@ import addIcon from "/add.png";
 import {Link, useNavigate } from "react-router-dom";
 
 
-export default function Nav() {
+export default function NavBottom(props) {
 
 return(
   <nav className="nav-bottom">
 
-  <Link to='/list'>
-    <img src={homeIcon} className="nav-icon" alt="Home" />
-  </Link>
-  <a href="">
-    <img src={heartIcon} className="nav-icon" alt="Favourites" />
+  {/* <Link to='/list'> */}
+  <a>
+    <img src={homeIcon} className="nav-icon" alt="Home" onClick= {props.handleLinkClick}  />
+  {/* </Link> */}</a>
+  <a>
+    <img src={heartIcon} onClick = {props.handleLinkClick} className="nav-icon" alt="Favourites" />
   </a>
   <a href="">
     <img src={compassIcon} className="nav-icon" alt="Near Me" />

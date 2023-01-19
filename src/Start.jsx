@@ -12,18 +12,15 @@ export default function Start(props) {
           enjoyment. Good coffee, good tunes, good vibes.
         </p>
 
-        {/* <button className="btn" onClick={props.toggleStart}>
-          Get Started
-        </button> */}
 
 <Link to='list'><button className="btn" >
          Get Started
-        </button></Link> 
+        </button></Link>
 
 
-      
 
-  
+
+
       </div>
     </div>
   );

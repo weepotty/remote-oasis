@@ -35,10 +35,9 @@ p {
 
 .start.container {
   display: flex;
-  background: url("./assets/remote-working.jpeg");
+  background: url("/remote-working.jpeg");
   background-size: cover;
   background-position: 50%;
-
 }
 
 .card {
@@ -56,14 +55,13 @@ p {
   text-align: center;
 }
 
+.info-image {
+  height: 50%;
+  object-fit: cover;
+}
 
-
-
-
-.info.container{
-
+.info.container {
   padding: 0;
-
 }
 
 .info.card {
@@ -78,7 +76,6 @@ p {
   0% {
     transform: translateY(900px);
   }
-
 
   100% {
     transform: translateY(0px);
@@ -134,10 +131,7 @@ p {
   padding-bottom: 0;
   flex-direction: column;
   background-color: #f9f9fb;
-
-
 }
-
 
 .current-location {
   text-align: left;
@@ -173,8 +167,6 @@ p {
   justify-content: space-evenly;
   border-radius: 20px;
   margin-top: auto;
-
-
 }
 
 .nav-top {
@@ -194,7 +186,6 @@ p {
   cursor: not-allowed;
 }
 
-
 .nav-top::-webkit-scrollbar {
   display: none;
 }
@@ -208,14 +199,13 @@ p {
 
 .nav-top > * {
   flex-shrink: 0;
-
 }
 
 .search-container {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  position:relative;
+  position: relative;
 }
 
 #search-bar {
@@ -252,7 +242,7 @@ p {
   cursor: pointer;
 }
 
-.filters{
+.filters {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
@@ -262,11 +252,13 @@ p {
   border-radius: 0.75rem;
   padding: 1rem;
   background-color: #4c9fc1;
-  color:#f9f9fb;
-  opacity:0
+  color: #f9f9fb;
+  opacity: 0;
 }
 
-.visible{animation: fadeIn 0.5s ease-in-out forwards;}
+.visible {
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
 
 @keyframes fadeIn {
   0% {
@@ -277,12 +269,9 @@ p {
   }
 }
 
-
-
-input[type=checkbox] {
-  accent-color:hsl(0, 0%, 27%);
+input[type="checkbox"] {
+  accent-color: hsl(0, 0%, 27%);
 }
-
 
 .cafe-thumbnail-section {
   display: flex;
@@ -294,30 +283,24 @@ input[type=checkbox] {
   scroll-snap-type: x mandatory;
   cursor: pointer;
   /* border: 1px solid red; */
-
 }
-
-
 
 .cafes {
   /* border: 1px solid purple; */
-  display:flex;
+  display: flex;
   flex-direction: column;
   min-width: 80%;
-
 }
 
 .cafes > img {
   border-radius: 0.75em;
   height: 80%;
-object-fit: cover;}
-
+  object-fit: cover;
+}
 
 .cafe-thumbnail-section::-webkit-scrollbar {
   display: none;
 }
-
-
 
 .cafe-name {
   font-weight: 700;
@@ -333,9 +316,9 @@ object-fit: cover;}
   margin-bottom: 0.5em;
 }
 
-/* .facilities {
-  opacity: 60%;
-} */
+.underline {
+  cursor: pointer;
+}
 .underline:after {
   background-color: #4c9fc1 !important;
 }

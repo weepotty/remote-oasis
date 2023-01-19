@@ -6,23 +6,14 @@ import { Link } from "react-router-dom";
 
 
 export default function Thumbnail(props) {
-  // const [imageUrl, setImageUrl] = useState(null);
-
-  // useEffect(() => {
-  //   fetch("https://picsum.photos/300")
-  //     .then((res) => setImageUrl(res.url))
-  //     .then(console.log('fetch request'))
-  // }, []);
-
-  const styles={
-    textDecoration: 'none'
-  }
 
 
 
   return (
-    <Link to={`${props.id}`} style={styles} className='cafes'>
-    {/* <div className="cafe-thumbnail-section"> */}
+    <Link to={`${props.id}`} style={{
+      textDecoration: 'none'
+    }} className='cafes'>
+
      <img src={`${props.img}`} alt={props.name} />
       <h1 className="cafe-name">{props.name}</h1>
       <p className="address">{props.address}</p>
@@ -30,7 +21,7 @@ export default function Thumbnail(props) {
         <img src={wifiIcon} alt="Wifi" />
         <img src={powerIcon} alt="Power Socket" />
       </div>
-    {/* </div> */}
+
     </Link>
   );
 }

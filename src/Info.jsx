@@ -44,7 +44,7 @@ export default function Info() {
 
 
 
-<img src={thisCafe.image} alt={thisCafe.name} />
+<img src={thisCafe.image} className='info-image' alt={thisCafe.name} />
 
 <h1 className="cafe-name">{thisCafe.cafe_name}</h1>
 <p>{thisCafe.address}</p>

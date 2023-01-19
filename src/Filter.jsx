@@ -19,7 +19,7 @@ const [isOpen, setIsOpen] = useState(false)
 
 
         <form className={`filters ${isOpen ? 'visible' : ''}`}>
-          <label for='openNow'>
+          <label htmlFor='openNow'>
             <input
               type="checkbox"
               name="openNow"
@@ -29,7 +29,7 @@ const [isOpen, setIsOpen] = useState(false)
             />
             Open now
           </label>
-          <label for='wifi'>
+          <label htmlFor='wifi'>
             <input
               type="checkbox"
               name="wifi"
@@ -39,7 +39,7 @@ const [isOpen, setIsOpen] = useState(false)
             />
             Wifi
           </label>
-          <label for='power'>
+          <label htmlFor='power'>
             <input
               type="checkbox"
               name="power"

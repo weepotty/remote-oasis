@@ -12,7 +12,8 @@ export default [
     "power": false,
     "coffee_price": 2368.51,
     "phone": 432,
-    "image": '/bandc.jpeg'
+    "image": '/bandc.jpeg',
+    "favourite": true
   },
   {
     "id": 2,
@@ -36,7 +37,8 @@ export default [
     "power": true,
     "coffee_price": 6963.69,
     "phone": 1115,
-    "image": "/3.jpeg"
+    "image": "/3.jpeg",
+    "favourite": true
   },
   {
     "id": 4,
@@ -72,7 +74,8 @@ export default [
     "power": false,
     "coffee_price": 541.74,
     "phone": 6241,
-    "image": "/6.jpeg"
+    "image": "/6.jpeg",
+    "new":true
   },
   {
     "id": 7,
@@ -84,7 +87,8 @@ export default [
     "power": true,
     "coffee_price": 2579.21,
     "phone": 6788,
-    "image": "/7.jpeg"
+    "image": "/7.jpeg",
+    "new":true,
   },
   {
     "id": 8,
@@ -120,7 +124,8 @@ export default [
     "power": false,
     "coffee_price": 1213.51,
     "phone": 5172,
-    "image": "/10.jpeg"
+    "image": "/10.jpeg",
+    "recently_visited": true
   },
   {
     "id": 11,
@@ -132,7 +137,8 @@ export default [
     "power": true,
     "coffee_price": 6635.79,
     "phone": 551,
-    "image": "/11.jpeg"
+    "image": "/11.jpeg",
+    "new":true
   },
   {
     "id": 12,
