@@ -5,11 +5,11 @@ import { useParams } from "react-router-dom";
 import backArrow from "./assets/back-arrow.png";
 import { Link, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-export default function Info() {
+export default function Info(props) {
 
   const { cafeId } = useParams();
 
-  const thisCafe = data.find((d) => d.id == cafeId);
+  const thisCafe = props.cafeData.find((d) => d.id == cafeId);
 
   const navigate = useNavigate();
   const [isSlidingOut, setIsSlidingOut] = useState(false);
@@ -48,11 +48,12 @@ export default function Info() {
           onClick={handleGoBack}
         />
 
+{thisCafe.image?
 
 
-
-<img src={thisCafe.image} className='info-image' alt={thisCafe.name} />
-
+<img src={thisCafe.image} className="info-image" alt={thisCafe.name} />
+: <img className="info-image" src="https://images.unsplash.com/photo-1636654129379-e7ae6f30bfd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29taW5nJTIwc29vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" />
+}
 
   <h1 className="cafe-name">{thisCafe.cafe_name}</h1>
   <p>{thisCafe.address}</p>

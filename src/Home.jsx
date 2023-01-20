@@ -6,9 +6,9 @@ import Thumbnail from "./Thumbnail.jsx";
 import NavTop from './NavTop.jsx'
 import { useState } from "react";
 
-export default function Home () {
+export default function Home (props) {
 
-  const allCafes = data.map(item => {
+  const allCafes = props.cafeData.map(item => {
     return (
         <Thumbnail
             key={item.id}
@@ -25,7 +25,7 @@ export default function Home () {
 })
 
 
-const favourites = data.filter(item => item.favourite).map(item => {
+const favourites = props.cafeData.filter(item => item.favourite).map(item => {
   return (
       <Thumbnail
           key={item.id}
@@ -44,7 +44,7 @@ const favourites = data.filter(item => item.favourite).map(item => {
 
 
 
-const newCafes = data.filter(item => item.new).map(item => {
+const newCafes = props.cafeData.filter(item => item.new).map(item => {
   return (
       <Thumbnail
           key={item.id}
@@ -60,7 +60,7 @@ const newCafes = data.filter(item => item.new).map(item => {
   )
 })
 
-const recentlyVisitedCafes = data.filter(item => item.recently_visited).map(item => {
+const recentlyAdded = props.cafeData.slice(-3).map(item => {
   return (
       <Thumbnail
           key={item.id}
@@ -80,11 +80,11 @@ const recentlyVisitedCafes = data.filter(item => item.recently_visited).map(item
 const [activeLink, setActiveLink] = useState("all")
 
 function handleLinkClick(event) {
+  console.log(event)
   const link = event.target.innerText || event.target.alt
 
   setActiveLink(link)
 }
-
 
 
 let cafesToRender
@@ -95,8 +95,8 @@ switch (activeLink) {
   case 'New':
     cafesToRender = newCafes;
     break;
-  case 'Recently Visited':
-  cafesToRender = recentlyVisitedCafes;
+  case 'Recently Added':
+  cafesToRender = recentlyAdded;
   break;
 
   default:

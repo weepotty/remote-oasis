@@ -16,7 +16,7 @@ export default function Thumbnail(props) {
       textDecoration: 'none'
     }} className='cafes'>
 
-     <img src={`${props.img}`} alt={props.name} />
+     {props.img? <img className='cafe-image' src={`${props.img}`} alt={props.name} /> : <img className='cafe-image' src="https://images.unsplash.com/photo-1636654129379-e7ae6f30bfd0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y29taW5nJTIwc29vbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60" />}
       <h1 className="cafe-name">{props.name}</h1>
       <p className="address">{props.address}</p>
       <div className="facilities">
