@@ -9,6 +9,8 @@ export default function Thumbnail(props) {
 
 
 
+
+
   return (
     <Link to={`${props.id}`} style={{
       textDecoration: 'none'

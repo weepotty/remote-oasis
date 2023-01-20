@@ -4,19 +4,22 @@ import data from "./data.js";
 import { useParams } from "react-router-dom";
 import backArrow from "./assets/back-arrow.png";
 import { Link, useNavigate } from "react-router-dom";
-
+import { useEffect } from "react";
 export default function Info() {
 
   const { cafeId } = useParams();
-
 
   const thisCafe = data.find((d) => d.id == cafeId);
 
   const navigate = useNavigate();
   const [isSlidingOut, setIsSlidingOut] = useState(false);
+  const [isSlidingIn, setIsSlidingIn] = useState(true);
+
+
+  const infoClass = isSlidingIn ? "come-in" : "";
 
   function handleGoBack() {
-
+    setIsSlidingIn(false)
     setIsSlidingOut(true)
       setTimeout(() => {
       navigate("/list");
@@ -24,16 +27,20 @@ export default function Info() {
 
   }
 
+
   const styles = {
-    animation: isSlidingOut? "slide-out 0.3s forwards" : "slide-in 0.3s"
+    animation: isSlidingOut && "slide-out 0.2s forwards"
   }
 
+  console.log(infoClass)
 
   return (
-    <div className="info container">
-      <div
+    // <div className="info container">
+    <div className={`info container ${infoClass}`} style={styles}>
+      {/* <div
         className="info card"
-        style={styles}>
+        style={styles}> */}
+  <div className="info card">
         <img
           src={backArrow}
           alt="Go Back"

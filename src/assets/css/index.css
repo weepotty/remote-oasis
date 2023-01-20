@@ -13,6 +13,8 @@
     -webkit-text-size-adjust: 100%;
 } */
 
+
+
 p {
   margin: 0;
 }
@@ -62,14 +64,23 @@ p {
 
 .info.container {
   padding: 0;
+
 }
 
+.come-in {
+  animation: slide-in 0.3s
+}
+
+.come-out {
+  animation: slide-out 0.3s
+}
 .info.card {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   height: 95%;
+
 }
 
 @keyframes slide-in {
@@ -147,7 +158,7 @@ p {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin-top: 0.6rem;
+  margin:0;
 }
 
 .area-name:after {
@@ -278,6 +289,7 @@ input[type="checkbox"] {
   gap: 1.2rem;
   text-align: left;
   overflow-x: scroll;
+  overflow-y: hidden;
   -ms-overflow-style: none;
   scrollbar-width: none;
   scroll-snap-type: x mandatory;
@@ -290,6 +302,7 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   min-width: 80%;
+
 }
 
 .cafes > img {
@@ -321,4 +334,18 @@ input[type="checkbox"] {
 }
 .underline:after {
   background-color: #4c9fc1 !important;
+}
+
+@media only screen and (max-width: 600px){
+
+.home.container{
+  height: 90vh;
+}
+
+.info.container {
+
+  margin: auto;
+}
+
+
 }
