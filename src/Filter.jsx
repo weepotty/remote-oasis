@@ -18,7 +18,7 @@ const [isOpen, setIsOpen] = useState(false)
         </button>
 
 
-        <form className={`filters ${isOpen ? 'visible' : ''}`}>
+        <form className={`filters-menu ${isOpen ? 'visible' : ''}`}>
           <label htmlFor='openNow'>
             <input
               type="checkbox"

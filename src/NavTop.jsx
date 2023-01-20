@@ -17,7 +17,7 @@ export default function NavTop(props) {
     <p className='underline inactive' onClick={props.handleLinkClick}>New</p>
   </a>
   <a>
-    <p className='underline inactive' onClick={props.handleLinkClick}>Recently Added</p>
+    <p className='underline' onClick={props.handleLinkClick}>Recently Added</p>
   </a>
 </nav>)
 

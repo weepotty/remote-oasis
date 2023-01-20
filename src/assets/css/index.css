@@ -259,8 +259,9 @@ margin:0;
   cursor: pointer;
 }
 
-.filters {
+.filters-menu {
   display: flex;
+  border: 1px solid #4c9fc1;
   flex-direction: column;
   gap: 0.5em;
   position: absolute;
@@ -268,8 +269,8 @@ margin:0;
   margin-top: 1rem;
   border-radius: 0.75rem;
   padding: 1rem;
-  background-color: #4c9fc1;
-  color: #f9f9fb;
+  background-color: #f9f9fb;
+  color:#464646;
   opacity: 0;
 }
 
@@ -287,7 +288,10 @@ margin:0;
 }
 
 input[type="checkbox"] {
-  accent-color: hsl(0, 0%, 27%);
+  accent-color: white;
+
+
+
 }
 
 .cafe-thumbnail-section {
