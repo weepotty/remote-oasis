@@ -53,14 +53,19 @@ export default function Info() {
 
 <img src={thisCafe.image} className='info-image' alt={thisCafe.name} />
 
-<h1 className="cafe-name">{thisCafe.cafe_name}</h1>
-<p>{thisCafe.address}</p>
 
-<p>icons go here</p>
+  <h1 className="cafe-name">{thisCafe.cafe_name}</h1>
+  <p>{thisCafe.address}</p>
 
-<p>Tucked away in a lush green suburb etc. description of the cafe goes here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos assumenda, delectus, magni ad consequuntur illum beatae obcaecati odio veniam ipsum omnis porro quasi architecto!</p>
+  <p>icons container</p>
 
-        <p>opening hours: {thisCafe.opening_time} - {thisCafe.closing_time}</p>
+  <p>Tucked away in a lush green suburb etc. description of the cafe goes here. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dignissimos assumenda, delectus, magni ad consequuntur illum beatae obcaecati odio veniam ipsum omnis porro quasi architecto!</p>
+
+          <p>opening hours: {thisCafe.opening_time} - {thisCafe.closing_time}</p>
+
+
+
+
       </div>
     </div>
   );

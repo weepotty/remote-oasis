@@ -13,8 +13,6 @@
     -webkit-text-size-adjust: 100%;
 } */
 
-
-
 p {
   margin: 0;
 }
@@ -57,30 +55,37 @@ p {
   text-align: center;
 }
 
-.info-image {
-  height: 50%;
-  object-fit: cover;
-}
-
 .info.container {
   padding: 0;
-
 }
 
-.come-in {
-  animation: slide-in 0.3s
-}
-
-.come-out {
-  animation: slide-out 0.3s
-}
 .info.card {
   border: 1px solid black;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 0.5em;
   height: 95%;
+}
 
+.info.card > p {
+  font-size: 2vh;
+flex-grow:1;
+}
+
+
+.info-image {
+  height: 50%;
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+.info .cafe-name {
+  font-size: 1.5rem;
+}
+
+.back-arrow {
+  cursor: pointer;
+  width: 25px;
 }
 
 @keyframes slide-in {
@@ -103,17 +108,12 @@ p {
   }
 }
 
-.info.card > img {
-  border-radius: 1.5rem;
+.come-in {
+  animation: slide-in 0.3s;
 }
 
-.info.card .cafe-name {
-  font-size: 1.5rem;
-}
-
-.back-arrow {
-  cursor: pointer;
-  width: 25px;
+.come-out {
+  animation: slide-out 0.3s;
 }
 
 .btn {
@@ -158,7 +158,7 @@ p {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 1.5rem;
-  margin:0;
+  margin: 0;
 }
 
 .area-name:after {
@@ -302,7 +302,6 @@ input[type="checkbox"] {
   display: flex;
   flex-direction: column;
   min-width: 80%;
-
 }
 
 .cafes > img {
@@ -336,16 +335,12 @@ input[type="checkbox"] {
   background-color: #4c9fc1 !important;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
+  .home.container {
+    height: 90vh;
+  }
 
-.home.container{
-  height: 90vh;
-}
-
-.info.container {
-
-  margin: auto;
-}
-
-
+  .info.container {
+    margin: auto;
+  }
 }
