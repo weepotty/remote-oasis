@@ -1,14 +1,24 @@
 import React, {useState, useEffect} from 'react'
 
-import { Link } from 'react-router-dom'
+import { Link, Navigate, useNavigate} from 'react-router-dom'
 
 export default function AddCafe (props) {
+
+const navigate = useNavigate()
+
+function navigateHome () {
+  setTimeout(() => {
+    navigate('/list')
+  }, 100);
+
+}
+
 
 
 
 return(
 <div className='container home'>
-<h1>Have a new place to suggest?</h1>
+<h1>Found a new place?</h1>
   <form className='add-cafe' name="add-cafe" onSubmit={props.handleSubmit} method="POST" data-netlify="true">
   <p>
     <label htmlFor="cafe_name">Name of Cafe: </label>
@@ -18,13 +28,13 @@ return(
 
 
  <p>
-    <label htmlFor="address">Area: </label>
+    <label htmlFor="area">Area: </label>
 
               <select
-                  id="address"
-                  value={props.formData.address}
+                  id="area"
+                  value={props.formData.area}
                   onChange={props.handleChange}
-                  name="address"
+                  name="area"
               ><option value="">Choose an area</option>
                   <option value="Bukit Timah">Bukit Timah</option>
                   <option value="Holland Village">Holland Village</option>
@@ -35,6 +45,17 @@ return(
 
               </select>
  </p>
+
+<p>
+  {props.formData.area === "Other" &&
+
+  <input type="text"
+  id="area-input"
+  onChange={props.handleChange}
+  ref={areaInput}
+  value={props.formData.area}
+  />}
+</p>
 
 
 
@@ -71,11 +92,13 @@ return(
  </p>
 
   <p>
-    <button className="btn" type="submit">Send</button>
+    <button className="btn" type="submit" onClick={navigateHome}>
+Save
+      </button>
   </p>
 </form>
 
-<Link to="/list"><button>back home</button></Link>
+
 </div>
 )
 }

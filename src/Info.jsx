@@ -4,7 +4,7 @@ import data from "./data.js";
 import { useParams } from "react-router-dom";
 import backArrow from "./assets/back-arrow.png";
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+
 export default function Info(props) {
 
   const { cafeId } = useParams();
@@ -32,7 +32,7 @@ export default function Info(props) {
     animation: isSlidingOut && "slide-out 0.2s forwards"
   }
 
-  console.log(infoClass)
+
 
   return (
     // <div className="info container">
